@@ -1,0 +1,859 @@
+$title : 'Lacquer';
+$font3 : 'Philosopher';
+$font : 'Yeon Sung';
+
+$color : #E1590F;
+$white : #FBE4B2;
+$darkDown : #191919;
+$imageLightDark : #2D2926;
+
+body{
+    color:$white;
+    font-family: $font;
+    font-size:17px;
+}
+input[type=text], label, .btn, .btn > input
+{
+    font-size:17px !important;
+}
+.btn > input{
+    width:100%;
+    height:100%;
+    cursor: pointer;
+}
+.content{
+    font-size:20px;
+}
+.uppercase{
+    text-transform : uppercase;
+}
+.highlight{
+    font-family: $title;
+}
+.primarColor{
+    background-color : $color;
+    margin-bottom:-1px;
+}
+.d-flex{
+    display: flex;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-items-center{
+    align-items: center;
+}
+.fitContent{
+    height: fit-content;
+}
+.pr{
+    position : relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pa{
+    position : absolute;
+}
+h1{
+    font-size:30px;
+    margin:0px;
+    line-height: unset;
+    font-family: $title;
+}
+a{
+    color : $white;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////OVERRIDE/////////////////////////////////////////////////
+nav .brand-logo {
+    position: relative;
+}
+@media only screen and (max-width: 992px){
+    nav .brand-logo {
+        left:0;
+        display: contents;
+    }
+}
+.nav-wrapper ul{
+    height:64px;
+    width:fit-content;
+    position: absolute;
+    right:0;
+    top:0;
+}
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    border : 1px solid $white;
+    border-radius: 10px;
+    color: $white;
+    padding-left:10px;
+    font-family: $font;
+}
+input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color : $white;
+}
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom : 1px solid $white;
+    box-shadow: none;
+}
+.input-field>label {
+    color : $white;
+    padding-left:10px;
+}
+.btn, .btn:hover, .btn:focus{
+    background-color : $white;
+    color : $darkDown;
+    width:100%;
+    border-radius: 10px;
+}
+.waves-effect input[type="button"], .waves-effect input[type="reset"], .waves-effect input[type="submit"] {
+    font-family: $font;
+    letter-spacing: 1px;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// HEADER LOGIN ////////////////////////////////////////
+.changeImageOnSmall{
+    display:none;
+    // background: linear-gradient(180deg, rgba(225,89,15,1) 0%, rgba(25,25,25,1) 97%);
+    background-color:$color;
+    height:585px;
+    width:100%;
+}
+.imageSize{
+    width : 100% !important;
+    height: 700px !important;
+}
+@media screen and (max-width : 1295px)
+{
+    .imageSize {
+        height : 700px !important;
+    }
+}
+@media screen and (max-width : 1060px)
+{
+    .imageSize {
+        height : 610px !important;
+    }
+    .contentImage{
+        width:200px !important;
+    }
+}
+.logIn{
+    & input-field {
+    border:1px solid $white !important;
+    }
+    width:400px !important;
+    background-color: rgba(45, 41, 38, 0.9);
+    border-radius: 20px;
+    padding:20px 40px !important;
+    margin-bottom : 80px;
+}
+.notAMember{
+    color: $white;
+    & a
+    {
+    color: $color !important ; 
+    }
+    text-align: center;
+}
+@media screen and(max-width : 992px)
+{
+    input[type=text], label, .btn, .btn > input
+    {
+        font-size:15px !important;
+    }
+    body{
+        font-size:15px;
+    }
+    .content{
+        font-size:17px;
+            }
+    h2{
+        font-size:25px !important;
+    }
+    .contentImage{
+        width:195px;
+        height:191px;
+    }
+}
+@media screen and(max-width : 757px)
+{
+    .logIn{
+        width : 300px !important;
+        //padding: 10px 20px !important;
+        margin-bottom : 50px;
+    }
+    h1
+    {
+        font-size:25px !important;
+    }
+    input[type=text]
+    {
+        font-size:15px !important;
+    }
+}
+@media screen and (max-width : 601px)
+{
+    .changeImageOnSmall
+    {
+    display:block;
+    }
+    .pr img {
+    display:none;
+    }
+    .logIn{
+        background-color:inherit !important;
+        padding:0px !important;
+        margin-bottom:80px;
+    }
+    .backgroundDark{
+        padding-top:40px;
+    }
+    .notAMember a{
+        color:$imageLightDark !important;
+    
+    }
+}
+@media screen and(max-width : 740px)
+{
+    .disappear{
+        display:none;
+    }
+    .menuUser i{
+        width:fit-content !important;
+        margin:0px !important;
+    }
+}
+@media screen and(max-width : 475px)
+{
+    .nav-wrapper{
+        display: flex !important;
+        flex-direction: column !important;
+        //justify-content: center;
+        & h1, ul{
+            width:100%;
+            position: relative;
+            display:block;
+        }
+        & h1{
+            text-align: center;
+        }
+        & ul{
+            height:fit-content;
+            display:flex;
+            justify-content: center;
+            background-color:$color;
+        & li{
+            height:fit-content;
+        }
+    }
+    }
+    .becomeFixed{ 
+        position:fixed !important;
+        top:0px !important;
+        z-index:200;
+      }
+      
+    nav{
+        height:fit-content;
+        position: relative !important;
+    }
+    .container{
+        padding:0px !important;
+    }
+}
+@media screen and(max-width : 330px)
+{
+    .logIn{
+        width:90% !important;
+        margin-left:5% !important;
+    }
+}
+@media screen and(max-width : 292px)
+{
+    .menuUser{
+        width:40px !important;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// FOOTER //////////////////////////////////////////////
+.modal.modal-fixed-footer .modal-content, .modal, .modal .modal-futer{
+    background-color:$darkDown !important;
+}
+.imageAuthor{
+    width:30% !important;
+}
+.modalButton{
+    color:$white;
+}
+.modal-content{
+    border-radius:10px;
+}
+.page-footer{
+    background-color : $color;
+    border-top:1px solid $color !important;
+}
+h3{
+    font-size:24px;
+}
+.footerLine{
+    margin-top:5px !important;
+    &:last-child{
+        text-align: right;
+    }
+}
+.emailIcon{
+    font-size:20px !important;
+    background-color: $color;
+    border-radius:40px;
+    padding:10px;
+}
+.small{
+    width:fit-content;
+}
+.fa-instagram::before, .fa-facebook-square:before, .fa-twitter-square:before{
+    padding-top:15px !important;
+}
+.social{
+    font-size:15px;
+}
+.footerDark{
+    background-color:$color;
+    padding:15px 0px;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// FOOTER LOGGED CONTENT //////////////////////////////////////////////
+.moja{
+    background-color:$color !important;
+    color:$white !important;
+}
+input[type=range]+.thumb{
+    background-color: $darkDown;
+}
+  input[type=range]::-webkit-slider-thumb {
+    background-color: $darkDown;
+}
+.greatBad{
+    display:flex;
+    justify-content: space-between;
+}
+.range-field{
+    margin-top:14.5px !important;
+}
+.feedback{
+    padding:0px !important;
+}
+#title{
+    padding:0px !important;
+    box-sizing: border-box;
+    padding-left:10px !important;
+
+}
+.footerForm{
+    width:80% !important;   
+    margin-left: 10% !important;
+}
+@media screen and (max-width :767px)
+{
+    .footerForm
+    {
+        width:60% !important;
+        margin-left:20% !important;
+    }
+}
+@media screen and (max-width :530px)
+{
+    .footerForm
+    {
+        width:80% !important;
+        margin-left:10% !important;
+    }
+}
+.keeperFeedback{
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+}
+
+/***************** DIAGRAM *******************/
+.statisticVote{
+    height:150px;
+    //background-color:$white;
+    border-left:1px solid $white;
+    border-bottom:1px solid $white;
+    width:80%;
+    margin-left:10%;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end !important;
+    position: relative;
+    margin-bottom:40px;
+}
+.oneStat{
+    background-color:$darkDown;
+    display: block;
+    width:5%;
+}
+.keepNumbers{
+    position:absolute;
+    color:$darkDown;
+    width:100%;
+    bottom:-25px;
+    left:0;
+    display:flex;
+    justify-content: space-between;
+}
+.number{
+    width:20px;
+}
+@media screen and (max-width :767px)
+{
+    .statisticVote
+    {
+        width:70% !important;
+        margin-left:15% !important;
+    }
+}
+@media screen and (max-width :450px)
+{
+    .footerForm, .statisticVote
+    {
+        width:90% !important;
+        margin-left:5% !important;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// CONTENT BEFORE LOGIN //////////////////////////////////////////////
+.contentBlock{
+    height: fit-content;
+}
+@media screen and (max-width :767px)
+{
+    .contentBlock div{
+        &:first-child{
+        display: flex;
+        justify-content: center;
+    } 
+        &:last-child{
+        margin-bottom:30px;
+        }
+    }
+
+    /* FOOTER MEDIA */
+    .footerLine{
+        text-align: center !important;
+    }
+}
+.backgroundDark {
+    background-color : $darkDown;
+    border:none !important;
+    margin-top:-1px;
+}
+h2{
+    font-size:25px;
+    margin:0px;
+    line-height: unset;
+    font-family: $title;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// MYSTERIUM HOME  ///////////////////////////////////////////////////
+/* M E N U */
+.material-icons{
+    margin-right:10px !important;
+}
+.stayHere{
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+/* C O N T E N T L E F T  */
+
+.miniContent{
+    //border:1px solid $color;
+    border-radius: 10px;
+    background-color:$imageLightDark;
+    width:80% !important;
+    //color:$darkDown;
+    margin-bottom:40px;
+    margin:20px;
+    & img {
+        width:100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+    & h3, p{
+        margin-top:10px;
+        padding:0px 20px;
+    }
+    & h3{
+        font-size:20px;
+    }
+    & a{
+        border-radius:0px 0px 10px 10px;
+        //border-right:1px solid $darkDown !important;
+        &:first-child {
+            border-right:none;
+        }
+    }
+}
+.infoNoMys{
+    width:80%;
+}
+/* C O N T E N T     M A I N*/
+/* NUMBER - INTERESTING / BORING */
+.likeCol{
+    //color:$color;
+}
+.mystery{
+    border-radius: 10px;
+    background-color:$imageLightDark;
+    margin-bottom:40px;
+    & img {
+        width:100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+    & h3, p{
+        padding:0px 20px;
+    }
+}
+.intBor{
+    width:100%;
+    text-align: center;
+    padding:10px 20px;
+    //color:$color;
+    &:first-child{
+        border-top:1px solid $darkDown;
+        border-right:1px solid $darkDown;
+        border-radius:0px 0px 0px 10px;
+    }
+    &:last-child{
+        border-top:1px solid $darkDown;
+        //border-left:0.5px solid $darkDown;
+        border-radius:0px 0px 10px 0px;
+    }
+}
+.pstyle{
+    border-top:1px solid $darkDown;
+    width:100%;
+    text-align: center;
+    padding-top:10px !important;
+}
+.backgroundClick{
+    background-color:rgba($darkDown, 0.6) !important; 
+}
+.page{
+    width:5%;
+    background-color:$imageLightDark;
+    text-align: center;
+    margin:0px 5px 5px 5px;
+    border-radius: 10px;
+    margin-bottom:40px;
+}
+.pageCol{
+    color:$imageLightDark;
+    background-color:$white;
+}
+.imageMystery{
+    position:relative;
+}
+.categoryMark{
+    position:absolute;
+    top:5%;
+    left:5%;
+    background-color: $color;
+    padding:5px 7px;
+    border-radius:10px;
+}
+@media screen and (max-width : 991px){
+    .miniContent{
+        margin-left:20% !important;
+        margin:0 auto !important;
+        text-align: center;
+    }
+    .infoNoMys{
+        text-indent: 20px;
+}
+}
+@media screen and (max-width : 670px){
+    .miniContent{
+        width:100% !important;
+    }
+    
+    .infoNoMys{
+    text-indent: 0px;
+    margin:0 auto;
+}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// MYSTERIUM CATEGORIES  ///////////////////////////////////////////////////
+/* C O N T E N T */
+.keepMysteriesList{
+    &:last-child{
+        margin-bottom:40px !important;
+    }
+}
+.mysteryPreview{
+    width:60%;
+    margin:0 auto;
+    margin-bottom:40px;
+}
+@media screen and (max-width : 710px){
+    .mysteryPreview{
+        width:100% !important;
+    }
+}
+.row{
+    display: block;
+    margin-bottom: 0px;
+}
+.icons{
+    width:300px !important;
+}
+.centerCols{
+    display:flex;
+    align-items: center;
+
+}
+@media screen and (max-width : 746px){
+    .icons{
+        width:250px !important;
+    }
+}
+@media screen and (max-width : 767px){
+    .icons{
+        margin:0 auto !important;
+        display:block;
+    }
+    .categoriesContent{
+        width:fit-content;
+        margin:0 auto;
+    }
+    .centerCols{
+        display:flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width : 601px){
+    .icons{
+
+        width:200px !important;
+    }
+}
+@media screen and (max-width : 440px){
+    .categoriesContent{
+        & h2{
+            width:100%;
+            text-align: center !important;
+            margin-bottom:10px;
+        }
+    }
+    .keepMysteriesList{
+        padding:10px !important; 
+        margin:0 auto;
+    }
+}
+@media screen and (max-width : 330px){
+    .icons{
+        width:150px !important;
+    }
+}
+@media screen and (max-width : 260px){
+    .icons{
+        width:100px !important;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// A D M I N     P A N E L ///////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// D A T A //////////////////////////////////////////////
+.data{
+    background-color:$imageLightDark;
+    width:48%;
+    border-radius:10px !important;
+    margin:20px 0px;
+    & p {
+        margin:5px 0px;
+    }
+}
+.messageMail{
+    text-indent:10px;
+}
+.info{
+    border-bottom:1px solid $darkDown;
+    padding:10px 15px;
+}
+.bodybody{
+    padding:10px 15px;
+}
+@media screen and (max-width : 850px){
+    .data
+    {
+    width:90% !important;
+    margin-left:5%;
+    }
+}
+@media screen and (max-width : 480px){
+    .info
+    {
+        flex-direction:column;
+        width:100%;
+    }
+}
+.nestanibgdark{
+    padding-top:0px !important;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// D E L E T E  //////////////////////////////////////////
+.mysteryDelete img{
+    width:100%;
+    border-radius:10px 10px 0px 0px;
+}
+.mysteryForDelete{
+    background-color:$imageLightDark;
+    padding-bottom:15px !important;
+    border-radius: 10px;
+    margin:10px !important;
+    height:fit-content;
+    & h3{
+        font-size:18px;
+        text-align: center !important;
+        height:79.2px !important;
+        width:fit-content;
+        margin:0 auto;
+    }
+    & span{
+        font-size:14px;
+    }
+}
+.deleteBlockResponsive{
+    width:30% !important;
+}
+.delete{
+    position:absolute;
+    top:5%;
+    right:5%;
+    color: $white;
+    
+    height:fit-content;
+    & i{
+        margin:0px !important;
+        font-size:30px;
+        background-color:$darkDown;
+        border-radius: 50px;
+    }
+}
+.categoryForDelete{
+    background-color:$imageLightDark;
+    border-radius: 10px;
+    margin:10px !important;
+    //height:fit-content;
+    & h3{
+        font-size:18px;
+        text-align: center !important;
+        height:79.2px !important;
+        width:fit-content;
+        margin:0 auto;
+    }
+}
+.updateTop{
+    top:10%;
+}
+.lala{
+    text-shadow:(2px, 2px, #fff) !important;
+}
+@media screen and (max-width : 991px){
+   .mysteryForDelete{
+    & h3{
+        font-size:18px !important;
+    }
+    & span{
+        font-size:14px;
+    }
+    }
+    .categoryForDelete{
+    & h3{
+        font-size:18px !important;
+    }
+    }
+}
+@media screen and (max-width : 787px){
+    .deleteBlockResponsive
+    {
+    width:45% !important;
+    }
+}
+@media screen and (max-width : 524px){
+    .deleteBlockResponsive
+    {
+    width:90% !important;
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// I N S E R T  //////////////////////////////////////////////
+.btnAdd{
+    width:fit-content !important;
+}
+input, textarea{
+    &::placeholder{
+        color:$white;
+    }
+}
+input[type=button]
+{
+    color:$darkDown;
+}
+.btnAddMC{
+    width:130px !important;
+}
+.keepFile{
+    margin:0px !important; 
+}
+.keepTextarea, .keepFile{
+    padding-right:0px !important;
+}
+.select-wrapper input.select-dropdown:focus {
+    border-bottom:1px solid $white;
+}
+.dropdown-content li>a, .dropdown-content li>span {
+    color:  $darkDown;
+    border-bottom:none;
+    background-color:$white !important;
+    margin-top:-1px !important;
+    height:fit-content;
+    &:hover{
+        background-color:rgba($white, 0.3) !important;
+    }
+}
+.select-dropdown li.disabled, .select-dropdown li.disabled>span, .select-dropdown li.optgroup {
+    color:$darkDown;
+    border-bottom:1px solid $white;
+    background-color:$white !important;
+
+    height:fit-content;
+    &:hover{
+        background-color:rgba($white, 0.3) !important;
+    }
+}
+.dropdown-content{
+    border-radius:10px;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// U P D A T E  //////////////////////////////////////////////
+#mysSelect, #catSelect{
+    margin-bottom:30px !important;
+}
+
+input{
+    border-right:1px solid $white !important;
+}
